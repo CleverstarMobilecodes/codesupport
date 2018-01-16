@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories {
+   mavenCentral()
+}
+dependencies {
+        compile 'org.springframework:spring-webmvc:3.0.5.RELEASE'
+        compile 'commons-codec:commons-codec:1.4'
+        providedCompile "javax.servlet:servlet-api:2.5"
+        
+}
+
+

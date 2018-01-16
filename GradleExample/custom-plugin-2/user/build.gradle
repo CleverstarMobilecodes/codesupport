@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        maven {
+            url uri('../repo')
+        }
+    }
+    dependencies {
+        classpath group: 'com.code4reference', 
+                  name: 'code4ReferencePlugin', 
+                  version: '1.2-SNAPSHOT'
+    }
+}
+
+apply plugin: 'code4reference'
+
+c4rArgs {
+    sender = 'Rakesh'
+    message = 'Hello there !!!!'
+
+    nestedArgs{
+       receiver = "gradleAdmin"
+       email = "gradleAdmin@code4reference.com"
+    }
+}
+
+
